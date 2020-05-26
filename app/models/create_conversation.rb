@@ -1,0 +1,2 @@
+class CreateConversation < ApplicationRecord
+end
