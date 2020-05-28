@@ -1,0 +1,2 @@
+class CreateService < ApplicationRecord
+end
