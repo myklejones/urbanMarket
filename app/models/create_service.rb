@@ -1,2 +1,0 @@
-class CreateService < ApplicationRecord
-end
