@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CreateMessageTest < ActiveSupport::TestCase
+class ConverstionTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

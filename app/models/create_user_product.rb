@@ -1,2 +1,0 @@
-class CreateUserProduct < ApplicationRecord
-end
