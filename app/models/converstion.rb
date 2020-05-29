@@ -1,9 +1,8 @@
 class Converstion < ApplicationRecord
+    belongs_to :sender, class_name: "User", :foreign_key => :sender_id 
+    belongs_to :recipient, class_name: "User", :foreign_key => :recipient_id 
 
-    has_many :convos_as_senders , foreign_key: :sender_id, class_name: 'Conversation', dependent: :destroy
-    has_many :recipients , through: :convos_as_senders, source: :recipient
-   
-    has_many :convos_as_recipients , foreign_key: :recipient_id, class_name: 'Conversation', dependent: :destroy
-    has_many :senders , through: :convos_as_recipients, source: :sender
+    has_many :messages, :dependent => :delete_all
+ 
    
 end
