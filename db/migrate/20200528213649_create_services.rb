@@ -5,8 +5,9 @@ class CreateServices < ActiveRecord::Migration[6.0]
       t.string :description
       t.integer :price 
       t.string :time_span
+      t.belongs_to :user
 
-      t.references :user, index: true, foreign_key: true
+     
       t.timestamps
     end
   end
