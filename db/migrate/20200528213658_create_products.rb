@@ -5,9 +5,8 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.integer :quantity
       t.string :description
       t.integer :price
-      # t.references :user, index: true , foreign_key: true,  polymorphic: true
-      # t.references :user,  polymorphic: true
-
+   
+      t.references :user, index: true, foreign_key: true
       t.timestamps
     end
   end
