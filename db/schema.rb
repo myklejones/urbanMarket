@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2020_06_01_020700) do
   end
 
   create_table "markets", force: :cascade do |t|
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -76,8 +77,10 @@ ActiveRecord::Schema.define(version: 2020_06_01_020700) do
     t.integer "price"
     t.string "time_span"
     t.bigint "user_id"
+    t.bigint "market_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["market_id"], name: "index_services_on_market_id"
     t.index ["user_id"], name: "index_services_on_user_id"
   end
 

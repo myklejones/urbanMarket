@@ -6,6 +6,7 @@ class CreateServices < ActiveRecord::Migration[6.0]
       t.integer :price 
       t.string :time_span
       t.belongs_to :user
+      t.belongs_to :market
 
      
       t.timestamps
