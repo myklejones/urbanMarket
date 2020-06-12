@@ -5,4 +5,8 @@ class User < ApplicationRecord
    
     has_many :convo_as_recipients , foreign_key: :recipient_id, class_name: 'Conversation', dependent: :destroy
     has_many :senders , through: :convos_as_recipients, source: :sender
+
+    has_many :services 
+    has_many :products
+    
 end
