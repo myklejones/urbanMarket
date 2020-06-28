@@ -7,6 +7,7 @@ resources :users do
   resources :messages
 end
 
+resources :login, only: [:create] 
 resources :products, only:[ :index, :show]
 resources :services, only: [ :index, :show]
 
