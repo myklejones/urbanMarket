@@ -5,7 +5,7 @@ class LoginController < ApplicationController
 
         if user && user.authenticate(params[:password])
           
-           $pass = params[:password]
+        #    $pass = params[:password]
             render json: {token: create_token(user.id), user_id: user.id}
             
         else
