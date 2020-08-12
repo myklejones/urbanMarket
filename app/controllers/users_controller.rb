@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
     def create
         user = User.create(new_user_params)
-        
+
         byebug
 
         if user.valid?
@@ -27,6 +27,7 @@ class UsersController < ApplicationController
     end
 
     def destroy
+        mike = user 
     end 
 
 
