@@ -24,6 +24,12 @@ class UsersController < ApplicationController
     end
 
     def update
+
+        if user.valid?
+            render json: {ok:true}
+        else 
+            render json: {errors: "error mrssage"}, status: :unprocessable_entity
+        end
     end
 
     def destroy
