@@ -27,10 +27,7 @@ class UsersController < ApplicationController
     end
 
     def destroy
-        mike = user 
-        more = 2+2 
-        mike +=1 
-        mike = 0 
+       
     end 
 
 
