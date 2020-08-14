@@ -28,7 +28,7 @@ class UsersController < ApplicationController
         if user.valid?
             render json: {ok:true}
         else 
-            render json: {errors: "error mrssage"}, status: :unprocessable_entity
+            render json: {errors: "error mrssage "}, status: :unprocessable_entity
         end
     end
 
