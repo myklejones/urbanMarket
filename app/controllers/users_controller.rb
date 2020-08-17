@@ -27,8 +27,22 @@ class UsersController < ApplicationController
     end
 
     def destroy
-       
+       user = user_params 
     end 
+
+    private
+    def update_user_params
+        params.require(:user).permit(:id,:username, :name, :age, :dob, :city_state, :about_me, :sex, :interest, :preference, :body_type, :profession, :photo)
+    end
+
+    def user_params 
+        params.permit(:id,:username, :email, :name, :photo, :age, :dob, :city_state, :about_me, :sex, :active, :interest, :preference, :body_type, :profession)
+    end 
+
+    def new_user_params 
+        params.permit(:username, :password ,:email, :name, :photo, :age, :dob, :city_state, :about_me, :sex, :active, :interest, :preference, :body_type, :profession)
+    end 
+
 
 
 end
